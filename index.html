@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Extension Extractor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+        <h1>File Extension Extractor</h1>
+        <label for="file">Select a file:</label><br>
+        <input type="file" id="myFile" name="filename"><br>
+        <button type="button" onclick="getFileExtension()">Get File Extension</button>
+        <p id="result"></p>
+     </div>
+     <script>
+         function getFileExtension(){
+            var fileInput = document.getElementById("myFile").value;
+
+            var extension = fileInput.split('.').pop().toLowerCase();
+            document.getElementById("result").innerHTML = "File Extension: " + extension;
+        }
+     </script>
+</body>
+</html>
